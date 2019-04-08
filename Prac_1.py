@@ -19,32 +19,32 @@ GPIO.setup(24, GPIO.OUT) #set LED3
 GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #set SWITCH1 and initial value to be pulled down
 GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) #set SWITCH2 and initial value to be pulled down
 
-def LED1on():
+def LED1on(): #function to turn on LED1
     GPIO.output(18, True)
     time.sleep(0.01)
 
-def LED1off():
+def LED1off(): #function to turn off LED1
     GPIO.output(18, False)
     time.sleep(0.01)
 
-def LED2on():
+def LED2on(): #function to turn on LED2
     GPIO.output(23, True)
     time.sleep(0.01)
 
-def LED2off():
+def LED2off(): #function to turn off LED2
     GPIO.output(23, False)
     time.sleep(0.01)
 
-def LED3on():
+def LED3on(): #function to turn on LED3
     GPIO.output(24, True)
     time.sleep(0.01)
 
-def LED3off():
+def LED3off(): #function to turn off LED3
     GPIO.output(24, False)
     time.sleep(0.01)
 
-LEDcounter = 0
-str_bin_conv = 0
+LEDcounter = 0 #create variable LEDcounter
+str_bin_conv = 0 #create variable str_bin_conv
 
 def switch1_callback(channel):
     global LEDcounter
